@@ -1,0 +1,42 @@
+/* Benefits */
+.benefits-list {
+    display: flex;
+    align-items: center;
+  }
+
+.benefits-item {
+    margin-right: 30px;
+    width: 270px;
+
+    &:last-child {
+        margin: 0;
+      }
+
+    &__box {
+        margin-bottom: 30px;
+        width: 270px;
+        height: 120px;
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        background: var(--secondary-bgc-color);
+        border-radius: 4px;
+      }
+      
+    &__title {
+        margin-bottom: 10px;
+      
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: var(--bold-text-color);
+      }
+      
+    &__text {
+        line-height: 1.71;
+      }
+  }
+

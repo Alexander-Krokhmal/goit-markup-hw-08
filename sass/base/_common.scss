@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+
+    font-size: 14px;
+    font-family: var(--main-font);
+    letter-spacing: 0.03em;
+    /* font-style: normal;
+    font-weight: 400; */
+
+    background-color: var(--main-bgc-color);
+    color: var(--main-text-color);
+  }
+
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    text-transform: uppercase;
+  }

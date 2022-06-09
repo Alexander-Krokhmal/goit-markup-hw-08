@@ -1,0 +1,23 @@
+:root {
+    /* Text colors */
+    --main-text-color: #757575;
+    --bold-text-color: #212121;
+    --white-text-color: #ffffff;
+    --footer-text-color: rgba(255, 255, 255, 0.6);
+  
+    /* Bgc colors */
+    --main-bgc-color: #ffffff;
+    --secondary-bgc-color: #f5f4fa;
+    --dark-bgc-color: #2f303a;
+    --btn-bgc-hover: #188ce8;
+  
+    --accent-color: #2196f3;
+  
+    /* Fonts */
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+  
+    /* Animation */
+    --duration: 250ms;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
