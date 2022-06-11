@@ -1,8 +1,7 @@
 /* Hero section */
 .hero {
-    max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     margin-left: auto;
     margin-right: auto;
   
@@ -13,11 +12,29 @@
       url(../images/Img-hero.jpg);
   
     letter-spacing: 0.06em;
+
+    @include mq(mobile){
+      max-width: 767.98px;
+    }
+
+    @include mq(tablet){
+      max-width: 1199.98px;
+    }
+
+    @include mq(desktop) {
+      max-width: 1600px;
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
   }
   
   .hero__title {
-    width: 670px;
+    width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+
+    @include mq(desktop) {
+      width: 670px;
+    }
   }

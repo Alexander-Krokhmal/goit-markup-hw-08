@@ -12,14 +12,38 @@ body {
   }
 
   .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq(desktop) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+    
   }
 
   .title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     text-transform: uppercase;
+
+    @include mq(desktop){
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+
+  .section-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    color: var(--bold-text-color);
+
+    @include mq(desktop){
+      font-size: 36px;
+      line-height: 1.17;
+    }
   }
