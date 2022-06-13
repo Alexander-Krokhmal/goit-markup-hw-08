@@ -30,21 +30,23 @@
           </a>
 
           <button
-            class="menu-button"
+            class="menu-button js-open-menu"
             type="button"
             data-menu-button
-            aria-controls="menu-container"
+            aria-controls="mobile-menu"
             aria-expanded="false"
           >
-            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-              <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+            <svg
+              class="mobile-menu__icon"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
               <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
             </svg>
           </button>
 
-          <div class="menu-container" id="menu-container" data-menu>Content</div>
-
-          <!-- <ul class="list nav__list">
+          <ul class="list nav__list">
             <li class="nav__item">
               <a class="link nav__link nav__link--current" href="./index.html">Студия</a>
             </li>
@@ -54,10 +56,10 @@
             <li class="nav__item">
               <a class="link nav__link" href="">Контакты</a>
             </li>
-          </ul> -->
+          </ul>
         </nav>
 
-        <!-- <ul class="list header-contacts">
+        <ul class="list header-contacts">
           <li class="header-contacts__item">
             <a class="link header-contacts__link" href="maito:info@devstudio.com">
               <svg class="header-contacts__icons" width="16" height="12">
@@ -74,7 +76,7 @@
               +38 096 111 11 11</a
             >
           </li>
-        </ul> -->
+        </ul>
       </div>
     </header>
 
@@ -647,7 +649,76 @@
       </div>
     </div>
 
+    <!-- Mobile menu -->
+
+    <div class="mobile-menu js-menu-container" id="mobile-menu" data-menu>
+      <button
+        class="menu-button js-close-menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg
+          class="mobile-menu__icon"
+          width="40"
+          height="40"
+          aria-label="Переключатель мобильного меню"
+        >
+          <use class="mobile-menu__icon--close" href="./images/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu-nav list">
+        <li class="mobile-menu-nav__item">
+          <a class="mobile-menu-nav__link link mobile-menu-nav__link--current" href="./index.html"
+            >Студия</a
+          >
+        </li>
+        <li class="mobile-menu-nav__item">
+          <a class="mobile-menu-nav__link link" href="./portfolio.html">Портфолио</a>
+        </li>
+        <li class="mobile-menu-nav__item">
+          <a class="mobile-menu-nav__link link" href="">Контакты</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-contacts list">
+        <li class="mobile-menu-contacts__item">
+          <a class="mobile-menu-contacts--tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+        </li>
+        <li class="mobile-menu-contacts__item">
+          <a class="mobile-menu-contacts--email link" href="malito:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-socials list">
+        <li class="mobile-menu-socials__item">
+          <a class="mobile-menu-socials__link link" href="">Instagram</a>
+        </li>
+        <li class="mobile-menu-socials__item">
+          <a class="mobile-menu-socials__link link" href="">Twitter</a>
+        </li>
+        <li class="mobile-menu-socials__item">
+          <a class="mobile-menu-socials__link link" href="">Facebook</a>
+        </li>
+        <li class="mobile-menu-socials__item">
+          <a class="mobile-menu-socials__link link" href="">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
     <script src="./js/modal.js"></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
+
     <script>
       (() => {
         document.querySelector('.js-speaker-form').addEventListener('submit', e => {

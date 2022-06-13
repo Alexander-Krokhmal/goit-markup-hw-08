@@ -14,55 +14,20 @@
     display: flex;
     align-items: center;
 
-    // Mobile 
+   @include mq(mobile-only){
     justify-content: space-between;
     width: 100%;
   }
+  }
   
-  .menu-button {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-  }
 
-  .menu-button .icon-cross {
-    display: none;
-  }
-
-  .menu-button.is-open .icon-cross {
-    display: block;
-  }
-
-  .menu-button.is-open .icon-menu {
-    display: none;
-  }
-
-  .menu-container {
-    display: none;
-
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-
-    padding: 10px;
-    text-align: center;
-
-    background: #FFFFFF;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-    
-    &.is-open{
-    display: block;
-    }
-  
-  }
-
-  
 .nav__list {
     display: flex;
     align-items: center;
+
+    @include mq(mobile-only){
+      display: none;
+    }
   }
   
 .nav__item {
@@ -90,11 +55,37 @@
       color: var(--accent-color);
     }
 }
+
+.nav__link--current {
+  position: relative;
+  color: var(--accent-color);
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+}
     
 .header-contacts {
     display: flex;
     align-items: center;
     margin-left: auto;
+
+    @include mq(mobile-only){
+      display: none;
+    }
+
+    @include mq(tablet-only){
+      display: block;
+
+    }
   }
   
   .header-contacts__link {
@@ -116,33 +107,30 @@
     &:focus {
       color: var(--accent-color);
     }
-}
-  
-.header-contacts__item {
-    margin-right: 50px;
 
-    &:last-child {
-        margin-right: 0;
-      }
-}
+        @include mq(not-desktop) {
+          .header-contacts__item:first-child & {
+              padding-bottom: 5px;
+              padding-top: 20px;
+            }
+
+            .header-contacts__item:last-child & {
+              padding-bottom: 20px;
+              padding-top: 5px;
+            }
     
-.nav__link--current {
-    position: relative;
-    color: var(--accent-color);
+        }    
+              
+}
 
-    &::after {
-        position: absolute;
-        bottom: 0;
-        content: '';
-      
-        display: block;
-        height: 4px;
-        width: 100%;
-        background-color: var(--accent-color);
-        border-radius: 2px;
-      }
-  }
-  
+@include mq(desktop) {
+  .header-contacts__item:not(:last-child) {
+      margin-right: 50px;
+    }
+}
+
+ 
+
 .header-contacts__icons {
     margin-right: 10px;
     fill: currentColor;

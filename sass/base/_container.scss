@@ -6,7 +6,7 @@
   margin-right: auto;
   
   @include mq(mobile) {
-    width: 480px;
+    min-width: 480px;
   }
 
   @include mq(tablet){

@@ -7,6 +7,7 @@
     height: 100%;
   
     visibility: none;
+    overflow-y: scroll;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.2);
   
@@ -29,7 +30,8 @@
     top: 50%;
     left: 50%;
   
-    width: 528px;
+    max-width: 450px;
+    width: 100%;
     padding: 40px;
   
     background-color: var(--main-bgc-color);
@@ -39,7 +41,14 @@
   
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--duration) var(--timing-function);
+ 
+    @include mq(desktop){
+      max-width: 528px;
+      width: 100%;
+    }
   }
+
+
   .modal-btn {
     position: absolute;
     top: 8px;
@@ -69,7 +78,11 @@
   }
   
   .form {
-    width: 448px;
+    width: 370px;
+
+    @include mq(desktop){
+      width: 448px;
+    }
   }
   
   .form-title {
