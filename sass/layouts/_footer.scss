@@ -7,21 +7,52 @@
 }
 
 .footer-container {
+
+  @include mq(desktop){
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
+  }
+ 
+}
+
+.footer-tablet{
+  @include mq(tablet-only){
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    margin-bottom: 60px;
+  }
+
+  @include mq(desktop){
+    display: flex;
+    align-items: baseline;
+    margin-right: auto;
+  }
 }
 
 .footer-contacts {
+@include mq(mobile-only){
+  margin-bottom: 60px;
+}
+
+@include mq(not-desktop){
+  text-align: center;
+}
+
+@include mq(desktop){
   margin-right: 70px;
 }
 
-.address__item {
-  margin-bottom: 9px;
+}
 
-  &:last-child {
-      margin-bottom: 0;
-    }
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
+
+  @include mq(desktop){
+    margin-bottom: 9px;
+  }
 }
 
 .address__link {
@@ -42,7 +73,14 @@
 }
 
 .footer-network {
+  @include mq(not-desktop){
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+@include mq(desktop){
   margin-right: auto;
+}
 }
 
 .footer-call-title {
@@ -56,16 +94,25 @@
   color: var(--white-text-color);
 }
 
+.footer-signature {
+ @include mq(not-desktop){
+  text-align: center;
+ }
+}
+
 .footer-signature__box {
+
+  @include mq(desktop){
   display: flex;
   align-items: center;
   justify-content: center;
+  }
+  
 }
 
 .footer-signature__input {
   display: inline-block;
   background-color: inherit;
-  width: 358px;
   height: 50px;
   padding: 15px 16px;
   margin-right: 12px;
@@ -84,6 +131,16 @@
       line-height: 1.25;
       letter-spacing: 0.03em;
       color: rgba(255, 255, 255, 0.6);
+    }
+
+    @include mq(not-desktop){
+      max-width: 450px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @include mq(desktop){
+      width: 358px;
     }
 }
 
@@ -113,4 +170,9 @@
   &:hover {
       background-color: var(--btn-bgc-hover);
     }
+
+        @include mq(not-desktop) {
+          margin-left: auto;
+          margin-right: auto;
+        }
 }

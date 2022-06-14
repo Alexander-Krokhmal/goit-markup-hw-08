@@ -14,6 +14,7 @@
     transition: transform var(--duration) var(--timing-function);
 
     background-color: var(--white-text-color);
+    overflow-y: scroll;
 }
 
 .mobile-menu.is-open {

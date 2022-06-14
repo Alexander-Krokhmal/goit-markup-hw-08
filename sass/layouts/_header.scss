@@ -118,9 +118,7 @@
               padding-bottom: 20px;
               padding-top: 5px;
             }
-    
-        }    
-              
+        }                 
 }
 
 @include mq(desktop) {
@@ -134,9 +132,28 @@
 .header-contacts__icons {
     margin-right: 10px;
     fill: currentColor;
+   
 
     &:hover {
         fill: var(--accent-color);
-      }
+      }   
   }
  
+.header-contacts__icons--phone {
+      width: 10px;
+      height: 14px;
+
+      @include mq(desktop){
+        height: 16px;
+      }
+    }
+
+.header-contacts__icons--env {
+  width: 14px;
+  height: 10px;
+
+  @include mq(desktop) {
+    width: 16px;
+    height: 12px;
+  }
+}
