@@ -45,7 +45,6 @@
 
   .work-examples__img{
     min-width: 100%; 
-
   }
   
   .work-examples__img-container-text {
@@ -67,6 +66,8 @@
     transform: translateY(101%);
     transition: transform var(--duration) var(--timing-function);
   
+    overflow-y: scroll;
+
     .work-examples__link:hover &,
     .work-examples__link:focus & {
       transform: translateY(0);
