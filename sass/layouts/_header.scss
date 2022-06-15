@@ -12,7 +12,7 @@
 
   .nav {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 
    @include mq(mobile-only){
     justify-content: space-between;
@@ -62,7 +62,7 @@
 
   &::after {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     content: '';
 
     display: block;

@@ -837,9 +837,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -897,7 +897,7 @@ textarea {
 
 .nav__link--current::after {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   content: '';
   display: block;
   height: 4px;
